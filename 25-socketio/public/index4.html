@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use of namespaces on socket.io</title>
+</head>
+<body>
+    <script src="http://localhost:9004/socket.io/socket.io.js"></script>
+    <script>
+        var upandrun = io.connect('http://localhost:9004/upandrun');
+        var clima = io.connect('http://localhost:9004/clima');
+
+        upandrun.on('message', function (data) {
+            document.write('<br/><br/>Node: Up and Run update<br/>');
+            document.write(data);
+        });
+
+        clima.on('message', function (data) {
+            document.write('<br/><br/>Node: Clima update<br/>');
+            document.write(data);
+        });
+
+    </script>
+</body>
+</html>
