@@ -30,5 +30,5 @@ socket.of('/clima')
       });
 
 /*
-Uso de namespaces en socket.io, para usar varios canales
+Uso de namespaces en socket.io
 */
