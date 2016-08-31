@@ -5,10 +5,11 @@
     <title>Use of namespaces on socket.io</title>
 </head>
 <body>
-    <script src="http://localhost:9004/socket.io/socket.io.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
     <script>
-        var upandrun = io.connect('http://localhost:9004/upandrun');
-        var clima = io.connect('http://localhost:9004/clima');
+        // no necesita especificar url completa xq socket server esta asociado a http server
+        var upandrun = io.connect('/upandrun');
+        var clima = io.connect('/clima');
 
         upandrun.on('message', function (data) {
             document.write('<br/><br/>Node: Up and Run update<br/>');

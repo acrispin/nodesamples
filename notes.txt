@@ -1,4 +1,5 @@
-ejemplos de la aplicacion node js de android
+if clone repo
+$ sudo npm install
 
 hacer test de carga
 $ ab -c 100 -n 100 http://127.0.0.1:8124/
